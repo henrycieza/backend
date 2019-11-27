@@ -1,4 +1,4 @@
-import mysql from 'mysql';
+
 
 const mySqlConnectionFactory = configuration => new Promise((resolve, reject) => {
   try {
