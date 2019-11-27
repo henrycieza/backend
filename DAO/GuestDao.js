@@ -14,4 +14,4 @@ class GuestDao extends AbstractDao {
   }
 }
 
-export default CustomerDao;
+export default GuestDao;

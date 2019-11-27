@@ -1,7 +1,7 @@
 import AbstractDao from './AbstractDao';
 import PersonalData from '../models/PersonalData';
 
-class PersonalDataDAO extends AbstractDao {
+class PersonalDataDao extends AbstractDao {
   constructor(connectionFactory) {
     super(connectionFactory);
   }
@@ -15,4 +15,4 @@ class PersonalDataDAO extends AbstractDao {
   }
 }
 
-export default PersonalDataDAO;
+export default PersonalDataDao;

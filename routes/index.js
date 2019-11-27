@@ -7,30 +7,25 @@ import { url } from 'inspector';
 const { check, validationResult } = require('express-validator');
 const { param, query, cookies, header, body} = require ('express-validator'); 
 
-import connectionFactory from '../mysql/CreedencialesBooking';
-import BookingDAO from '../DAO/BookingDAO';
-import GuestDAO from '../DAO/GuestDAO';
    
 const app = express();
 //const server = express(); 
 
 //rutas BookingDAO
 
-router.get("/",index)
-router.post("/booking", BookingDAO.create)
- let BookingDAO = new BookingDAO(connectionFactory);
-
-router.get("/booking/:id", BookingDAO.red)
-router.put("/booking/:id", BookingDAO.update)
-router.delete("/booking/:id", BookingDAO.delete)
+//router.get("/",index)
+router.post("/booking", BookingDao.create)
+router.get("/booking/:id", BookingDao.red)
+router.put("/booking/:id", BookingDao.update)
+router.delete("/booking/:id", BookingDao.delete)
 
 //rutas GuestDAO
 
-router.get("/",index)
-router.post("/create", GuestDAO.create)
-router.get("/:id", GuestDAO.read)
-router.put("/:id", GuestDAO.update)
-router.delete("/:id", GuestDAO.delete)
+//router.get("/",index)
+// router.post("/create", GuestDao.create)
+// router.get("/:id", GuestDao.read)
+// router.put("/:id", GuestDao.update)
+// router.delete("/:id", GuestDao.delete)
 
 export default router;
 

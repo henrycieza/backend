@@ -1,5 +1,4 @@
 import AbstractDao from './AbstractDao';
-
 class BookingDao extends AbstractDao {
   constructor(connectionFactory) {
     super(connectionFactory);

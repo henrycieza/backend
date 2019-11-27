@@ -1,21 +1,30 @@
+import mysql from 'mysql';
 
-
-const mySqlConnectionFactory = configuration => new Promise((resolve, reject) => {
-  try {
-    const mySqlConnection = mysql.createConnection({...{
+class MySqlConnectionFactory {
+  constructor(configuration) {
+    this.configuration = { ...{
       host: 'localhost',
       port: 13306,
-      user: 'fastcheckin',
-      password : 'fastcheckin',
-      database: 'fastcheckin'
-    }, ...configuration });
-
-    mySqlConnection.connect(function(err) {
-      err ? reject(err) : resolve(mySqlConnection);
-    });
-  } catch (error) {
-    reject(error);
+      user: 'mysql',
+      password : 'mysql',
+      database: 'default'
+    }, ...configuration };
   }
-});
 
-export default mySqlConnectionFactory;
+  create() {
+    const mySqlConnection = mysql.createConnection(this.configuration);
+    
+    return mySqlConnection;
+  }
+}
+
+export default MySqlConnectionFactory;
+
+export const mySqlConnectionFactory = new MySqlConnectionFactory({
+  host: 'localhost',
+  port: 13306,
+  user: 'fastcheckin',
+  password : 'fastcheckin',
+  database: 'fastcheckin'
+
+});
