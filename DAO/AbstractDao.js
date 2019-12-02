@@ -52,5 +52,7 @@ class AbstractDao {
   
   export default AbstractDao;
 
+  export const AbstractDao = new AbstractDao({ mySqlConnectionFactory });
+
   
   

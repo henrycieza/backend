@@ -7,6 +7,7 @@ class Guest extends PersonalData {
       this.bird_date = bird_date;
       
     }
+    
   }
   
   export default Guest;

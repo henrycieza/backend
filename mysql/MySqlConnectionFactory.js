@@ -1,4 +1,5 @@
 import mysql from 'mysql';
+import configurationdb from './configurationdb';
 
 class MySqlConnectionFactory {
   constructor(configuration) {
@@ -20,11 +21,4 @@ class MySqlConnectionFactory {
 
 export default MySqlConnectionFactory;
 
-export const mySqlConnectionFactory = new MySqlConnectionFactory({
-  host: 'localhost',
-  port: 13306,
-  user: 'fastcheckin',
-  password : 'fastcheckin',
-  database: 'fastcheckin'
-
-});
+export const mySqlConnectionFactory = new MySqlConnectionFactory({ configurationdb });
