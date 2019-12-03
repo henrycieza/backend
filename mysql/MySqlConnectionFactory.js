@@ -19,6 +19,5 @@ class MySqlConnectionFactory {
   }
 }
 
-export default MySqlConnectionFactory;
 
-export const mySqlConnectionFactory = new MySqlConnectionFactory({ configurationdb });
+export default new MySqlConnectionFactory({ configurationdb });

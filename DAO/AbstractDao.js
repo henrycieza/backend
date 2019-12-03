@@ -1,4 +1,4 @@
-const { mySqlConnectionFactory } = require ('../mysql/MySqlConnectionFactory');
+import mySqlConnectionFactory from '../mysql/MySqlConnectionFactory';
 
 class AbstractDao {
     constructor(connectionFactory) {
@@ -50,9 +50,8 @@ class AbstractDao {
     }
   }
   
-  export default AbstractDao;
-
-  export const AbstractDao = new AbstractDao({ mySqlConnectionFactory });
+export default AbstractDao;
+  // export let AbstractDao = new AbstractDao({ mySqlConnectionFactory });
 
   
   
