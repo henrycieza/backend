@@ -28,7 +28,7 @@ class Booking {
         });
       }
       const Booking = new Booking({
-        //this.code : codeGenerator(),  
+        
         arrival_date : req.body.arrival_date,
         departure_date : req.body.departure_date,
         num_guest : req.body.num_guest,

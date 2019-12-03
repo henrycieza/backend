@@ -208,7 +208,7 @@ const app = express();
 /******************* POST (/registro/booking) ***************************/
 app.post('/booking',[
   /*datos customer*/
-   check('first_name','invalide name').isLength({min:4 , max :150}),
+  check('first_name','invalide name').isLength({min:4 , max :150}),
   check('last_name','invalide last name').isLength({min:4 , max :150}),
   check('document_number','invalide DNI').isLength({max :15}),
   check('country','invalide country').isLength({min:4, max:100}),
