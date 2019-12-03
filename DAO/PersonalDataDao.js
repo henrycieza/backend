@@ -6,7 +6,7 @@ class PersonalDataDao extends AbstractDao {
     super(connectionFactory);
   }
   
-  async saveCustomer(PersonalData) {
+  async saveCustomer(data) {
     const { first_name, last_name, document_number, country } = PersonalData;
     
     const dataCustomer = await this.command('INSERT INTO personal_data (first_name, last_name, document_number, country) VALUES (?,?,?,?);', [first_name,last_name,document_number,country]);

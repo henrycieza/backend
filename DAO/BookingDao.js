@@ -2,7 +2,7 @@ import AbstractDao from './AbstractDao';
 class BookingDao extends AbstractDao {
 
   constructor() {
-    super(AbstractDao.connect());
+    super(AbstractDao.create());
   }
   
   async saveBooking(Booking) {
